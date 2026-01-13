@@ -3,6 +3,7 @@
 mkdir -p build
 
 SRCDIR=$1
+OUTNAME=$2
 
 SCRIPTDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
@@ -14,6 +15,6 @@ pandoc \
     --toc-depth=2 \
     --lua-filter $SCRIPTDIR/../templates/pagebreak.lua \
     --filter $SCRIPTDIR/pandoc-crossref \
-    -o build/output.pdf \
+    -o build/$OUTNAME \
     $SRCDIR/title.txt $SRCDIR/*.md
 

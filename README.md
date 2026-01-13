@@ -4,10 +4,14 @@ helpers for building textbook pdfs
 
 ## requirements
 
+- texlive
+- texlive-latex-extra
+- texlive-fonts-recommended
+- texlive-fonts-extra
 - pandoc (apt install works)
 - https://github.com/lierdakil/pandoc-crossref
-  this is written in haskell, suggest grabbing a prebuilt release.
-  put this executable at booktools/bin/pandoc-crossref
+  this is written in haskell, suggested path is grabbing a prebuilt release for
+  your architecture. put this executable at booktools/bin/pandoc-crossref
 - on debian, install texlive-xetex
 
 ## directory layout
